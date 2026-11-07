@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Alguien Especial ✨</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chic: {
+                            900: '#0f0c1b',
+                            800: '#1a1528',
+                            700: '#2b223d',
+                            accent: '#ff4d8d',
+                            glow: '#ff75a5',
+                            soft: '#ffd6e5'
+                        }
+                    },
+                    fontFamily: {
+                        cursive: ['"Caveat"', 'cursive'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Ambient background canvas styling */
+        #bgCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Custom glow effects */
+        .glow-chic {
+            box-shadow: 0 0 35px rgba(255, 77, 141, 0.25);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 77, 141, 0.5);
+        }
+
+        /* Floating keyframe animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+
+        /* Pulse heartbeat */
+        @keyframes pulseHeart {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.12); }
+        }
+
+        .animate-heartbeat {
+            animation: pulseHeart 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-chic-900 text-gray-100 font-sans min-h-screen relative overflow-x-hidden selection:bg-chic-accent selection:text-white">
+
+    <!-- Interactive Background Canvas for Floating Hearts & Particles -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Content Container -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-8 md:py-16 space-y-16 md:space-y-24">
+
+        <!-- Header / Hero Section -->
+        <header class="text-center space-y-4 pt-4">
+            <div class="inline-block animate-heartbeat text-chic-accent text-6xl md:text-7xl mb-2 filter drop-shadow-[0_0_15px_rgba(255,77,141,0.6)]">
+                ✨
+            </div>
+            <h1 class="font-cursive text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-chic-soft via-chic-glow to-chic-accent glow-text tracking-wide">
+                Un Detalle Especial
+            </h1>
+            <p class="text-gray-300 font-light text-base md:text-xl max-w-lg mx-auto leading-relaxed">
+                Dicen que las mejores conexiones empiezan con una gran risa. 😉
+            </p>
+            <div class="pt-4 flex justify-center gap-4">
+                <a href="#letter" class="px-6 py-3 rounded-full bg-gradient-to-r from-chic-accent to-chic-glow hover:opacity-90 text-white font-medium shadow-lg glow-chic transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-envelope-open-text mr-2"></i> Leer la Nota
+                </a>
+                <a href="#question" class="px-6 py-3 rounded-full bg-chic-800/80 text-chic-soft border border-chic-accent/30 font-medium shadow-md hover:bg-chic-700 transition-all">
+                    <i class="fa-solid fa-sparkles mr-2"></i> Una Pregunta
+                </a>
+            </div>
+        </header>
+
+        <!-- Dynamic Counter/Vibe Check Section -->
+        <section class="bg-chic-800/60 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-2xl border border-chic-accent/20 text-center animate-float">
+            <h2 class="text-xl md:text-2xl font-semibold text-chic-soft mb-4"> ❤️ Gracias por ser alguien tan especial en mi vida. ❤️
+              
+                
+                </div>
+            </div>
+          
+        </section>
+
+        <!-- Subtle Flirty Letter Section -->
+        <section id="letter" class="scroll-mt-10">
+            <div class="bg-gradient-to-b from-chic-800/80 to-chic-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-chic-accent/30 relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 text-chic-accent/10 text-9xl pointer-events-none">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </div>
+                <h2 class="font-cursive text-5xl md:text-6xl text-chic-glow mb-6 text-center">
+                    Una nota para ti... 💭
+                </h2>
+                <div class="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-4 text-base md:text-lg">
+                    <p>
+                        yale,
+                    </p>
+                    <p>
+                        Estaba pensando en lo increíble que es estar con alguien conquien puedes ser tu mismo, hablar contigo, reírnos de cualquier babosada estar contigo siempre me alegra el día.
+                    </p>
+                    
+                
+                    
+                    <p>
+                        No quería dejar pasar la oportunidad de decirte lo mucho que valoro lo que compartimos, te queria dar las gracias por ser alguien tan increible y decirte que por eso te quiero mucho 💕
+                    </p>
+                    <p class="font-cursive text-3xl text-chic-accent pt-4 text-right">
+                        Alguien que disfruta mucho tu compañía ✨
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Memory Cards Section -->
+        <section class="space-y-6">
+            <div class="text-center">
+                <h2 class="font-cursive text-5xl md:text-6xl text-chic-glow">
+                    Pequeños Detalles 🔍
+                </h2>
+                <p class="text-gray-400 text-sm mt-1">Haz clic en cada tarjeta para descubrir pistas</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Memory Card 1 -->
+                <div onclick="flipCard(this)" class="cursor-pointer group perspective h-64">
+                    <div class="relative w-full h-full duration-500 rounded-2xl shadow-lg transform-style-3d group-hover:shadow-chic transition-all">
+                        <div class="absolute w-full h-full bg-chic-800/70 border border-chic-accent/20 rounded-2xl p-6 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="w-16 h-16 rounded-full bg-chic-700/50 flex items-center justify-center text-chic-accent text-3xl">
+                                ☕
+                            </div>
+                            <h3 class="font-semibold text-gray-200 text-lg">Las Pláticas</h3>
+                            <p class="text-xs text-chic-glow font-medium">Toca para descubrir 👀</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory Card 2 -->
+                <div onclick="flipCard(this)" class="cursor-pointer group perspective h-64">
+                    <div class="relative w-full h-full duration-500 rounded-2xl shadow-lg transform-style-3d group-hover:shadow-chic transition-all">
+                        <div class="absolute w-full h-full bg-chic-800/70 border border-chic-accent/20 rounded-2xl p-6 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="w-16 h-16 rounded-full bg-chic-700/50 flex items-center justify-center text-chic-accent text-3xl">
+                                🍕
+                            </div>
+                            <h3 class="font-semibold text-gray-200 text-lg">Los Salidas</h3>
+                            <p class="text-xs text-chic-glow font-medium">Toca para descubrir 👀</p>
+                        </div>
+                    </div>
+                </div>
+ <!-- Memory Card 2 -->
+                <div onclick="flipCard(this)" class="cursor-pointer group perspective h-64">
+                    <div class="relative w-full h-full duration-500 rounded-2xl shadow-lg transform-style-3d group-hover:shadow-chic transition-all">
+                        <div class="absolute w-full h-full bg-chic-800/70 border border-chic-accent/20 rounded-2xl p-6 flex flex-col justify-center items-center text-center space-y-3">
+                            <div class="w-16 h-16 rounded-full bg-chic-700/50 flex items-center justify-center text-chic-accent text-3xl">
+                                😎
+                            </div>
+                            <h3 class="font-semibold text-gray-200 text-lg">lo buena que eres</h3>
+                            <p class="text-xs text-chic-glow font-medium">Toca para descubrir 👀</p>
+                        </div>
+                    </div>
+                </div>
+               
+                
+        </section>
+
+        <!-- Playful Interactive Flirty Question Section -->
+        <section id="question" class="scroll-mt-10">
+            <div class="bg-chic-800/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-chic-accent/30 text-center relative overflow-hidden min-h-[340px] flex flex-col justify-center items-center">
+                
+                <div id="questionContainer" class="space-y-6 w-full">
+                    <div class="text-5xl animate-bounce">💖 ❤️</div>
+                    <h2 class="font-cursive text-5xl md:text-6xl text-chic-glow font-bold">
+                        Una carta que hice solo para ti.
+                    </h2>
+                    <p class="text-gray-300">¿te gusto mi carta? 🥺</p>
+
+                    <div class="flex flex-wrap justify-center items-center gap-6 pt-4 relative min-h-[60px]" id="buttonArea">
+                        <!-- Yes Button -->
+                        <button id="yesBtn" onclick="handleYesClick()" class="px-8 py-3.5 bg-gradient-to-r from-chic-accent to-chic-glow hover:opacity-90 text-white font-bold text-lg rounded-full shadow-lg glow-chic hover:scale-105 active:scale-95 transition-all">
+                            ¡Obvio que sí! 😇
+                        </button>
+
+                        <!-- Playful Runaway No Button -->
+                        <button id="noBtn" class="px-8 py-3.5 bg-chic-700 text-gray-300 font-bold text-lg rounded-full shadow transition-all duration-200">
+                            Paso 😜
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hidden Success Message -->
+                <div id="successMessage" class="hidden space-y-6 animate-fadeIn">
+                    <div class="text-6xl">✨</div>
+                    <h2 class="font-cursive text-5xl md:text-6xl text-chic-glow font-bold">
+                        ¡Sabía que dirías que sí!
+                    </h2>
+                    <p class="text-gray-200 text-lg max-w-md mx-auto">
+                        wujuuuu muchas graciaaaas
+                    </p>
+                    <button onclick="resetQuestion()" class="px-6 py-2 bg-chic-700 text-chic-soft rounded-full font-medium text-sm hover:bg-chic-600 transition-colors">
+                        Reintentar 🔄
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm space-y-2 pb-8">
+            <p>Diseñado especialmente con estilo & vibes ✨</p>
+            <p class="text-xs text-gray-600">&copy; 2026 Para Alguien Especial</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // --- 1. Ambient Dark Sparks & Floating Hearts Canvas ---
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class SparkParticle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = canvas.height + Math.random() * 80;
+                this.size = Math.random() * 4 + 2;
+                this.speedY = Math.random() * 1.2 + 0.3;
+                this.speedX = Math.random() * 0.6 - 0.3;
+                this.opacity = Math.random() * 0.6 + 0.2;
+                this.isHeart = Math.random() > 0.6;
+            }
+
+            update() {
+                this.y -= this.speedY;
+                this.x += this.speedX;
+                if (this.y < -20) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.fillStyle = `rgba(255, 117, 165, ${this.opacity})`;
+
+                if (this.isHeart) {
+                    // Draw mini heart
+                    const s = this.size * 2;
+                    ctx.beginPath();
+                    ctx.moveTo(0, s * 0.3);
+                    ctx.bezierCurveTo(0, 0, -s/2, 0, -s/2, s*0.3);
+                    ctx.bezierCurveTo(-s/2, s*0.7, 0, s, 0, s);
+                    ctx.bezierCurveTo(0, s*0.7, s/2, s*0.7, s/2, s*0.3);
+                    ctx.bezierCurveTo(s/2, 0, 0, 0, 0, s*0.3);
+                    ctx.fill();
+                } else {
+                    // Draw glow spark
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                ctx.restore();
+            }
+        }
+
+        // Initialize particles
+        for (let i = 0; i < 40; i++) {
+            particles.push(new SparkParticle());
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // --- 2. Timer Counter ---
+        const startDate = new Date('2024-01-01T00:00:00');
+
+        function updateTimer() {
+            const now = new Date();
+            const diff = now - startDate;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // --- 3. Runaway "No" Button ---
+        const noBtn = document.getElementById('noBtn');
+        const container = document.getElementById('questionContainer');
+
+        function moveNoButton() {
+            const containerRect = container.getBoundingClientRect();
+            const btnRect = noBtn.getBoundingClientRect();
+
+            const maxX = containerRect.width - btnRect.width - 20;
+            const maxY = containerRect.height - btnRect.height - 20;
+
+            const randomX = Math.max(10, Math.floor(Math.random() * maxX));
+            const randomY = Math.max(10, Math.floor(Math.random() * maxY));
+
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        }
+
+        noBtn.addEventListener('mouseenter', moveNoButton);
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            moveNoButton();
+        });
+
+        // --- 4. "Yes" Celebration Handler ---
+        function handleYesClick() {
+            document.getElementById('questionContainer').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 120,
+                    spread: 80,
+                    origin: { y: 0.6 },
+                    colors: ['#ff4d8d', '#ff75a5', '#ffd6e5', '#ffffff']
+                });
+            }
+        }
+
+        function resetQuestion() {
+            document.getElementById('questionContainer').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+            noBtn.style.position = 'static';
+        }
+
+        // --- 5. Memory Cards Flip ---
+        function flipCard(cardEl) {
+            const inner = cardEl.querySelector('.relative');
+            const hints = [
+                "Nunca falta de qué hablar ni de qué reírnos... 😉",
+                "Siempre se siente como el mejor plan del fin de semana.",
+                "eres tan buena persona que ni las palabras podrian explicar lo increible que eres ✨",
+            ];
+            
+            if (!cardEl.dataset.flipped) {
+                cardEl.dataset.flipped = "true";
+                inner.innerHTML = `
+                    <div class="absolute w-full h-full bg-gradient-to-br from-chic-accent to-chic-glow text-white rounded-2xl p-6 flex flex-col justify-center items-center text-center shadow-xl space-y-2">
+                        <div class="text-3xl">✨</div>
+                        <p class="font-medium text-sm md:text-base">${hints[Array.from(cardEl.parentNode.children).indexOf(cardEl)]}</p>
+                        <span class="text-xs opacity-75 pt-2">Toca para volver</span>
+                    </div>
+                `;
+            } else {
+                delete cardEl.dataset.flipped;
+                const titles = ["Las Pláticas", "Las Salidas", "Lo buena que eres"];
+                const icons = ["☕", "🍕", "😎"];
+                const idx = Array.from(cardEl.parentNode.children).indexOf(cardEl);
+                
+                inner.innerHTML = `
+                    <div class="absolute w-full h-full bg-chic-800/70 border border-chic-accent/20 rounded-2xl p-6 flex flex-col justify-center items-center text-center space-y-3">
+                        <div class="w-16 h-16 rounded-full bg-chic-700/50 flex items-center justify-center text-chic-accent text-3xl">
+                            ${icons[idx]}
+                        </div>
+                        <h3 class="font-semibold text-gray-200 text-lg">${titles[idx]}</h3>
+                        <p class="text-xs text-chic-glow font-medium">Toca para descubrir 👀</p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
